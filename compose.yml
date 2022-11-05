@@ -13,19 +13,3 @@ services:
     image:  xenacod/hngbackend-task
     ports:
       - "9000:9000"
-              
-  nginx:
-    container_name: website.testapp.proxy
-    build: ./nginx
-    # volumes:
-      # - ./app/static:/usr/src/app/static
-      # - media_volume:/usr/src/app/media
-    ports:
-      - "3000:3000"
-    depends_on:
-      - web
-    networks:
-      local_network:
-        ipv4_address: http://18.205.156.119/    
-
-      
